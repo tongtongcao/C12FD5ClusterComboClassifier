@@ -1,4 +1,4 @@
-The package is to train classifier to predict if a 6-cluster combo belongs to a track candidate by Multi-Layer Perceptron (MLP).\
+The package is to train classifier to predict if a 5-cluster combo belongs to a track candidate by Multi-Layer Perceptron (MLP).\
 The AI model is designed by pytorch and pytorch-lightning.
 
 It is recommended to run the package in python virtual enviroment.
@@ -30,7 +30,7 @@ Arguments:
     - --no_train      &nbsp;&nbsp;&nbsp;      Skip training and only run inference using a saved model
     - --enable_progress_bar &nbsp;&nbsp;&nbsp; Enable progress bar during training (default: disabled)
 
-For the estimator, inputs are average wires and slopes of 6 clusters, where average wires are divided by 112 for normalization.
+For the estimator, inputs are average wires (divided by 112), slopes of 5 clusters, and superlayer of missing cluster (divided by 6).
      
 and output is probability.
 
