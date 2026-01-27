@@ -225,7 +225,8 @@ def main():
 
     if not model_file.exists():
         raise FileNotFoundError(f"Model file not found: {model_file}")
-    
+
+    model = torch.jit.load(model_file)
     model.eval()
 
     # Run inference
